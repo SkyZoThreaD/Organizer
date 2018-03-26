@@ -4,7 +4,7 @@
 #include <gtkmm.h>
 #include "DatabaseConnector.h"
 
-class AddWindow : public Gtk::Dialog
+class AddWindow : public Gtk::Window
 {
 public:
   AddWindow();

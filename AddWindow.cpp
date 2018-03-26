@@ -7,7 +7,8 @@ using std::sprintf;
 using std::strtol;
 
 AddWindow::AddWindow()
-: m_VBox(Gtk::ORIENTATION_VERTICAL),
+: 
+  m_VBox(Gtk::ORIENTATION_VERTICAL),
   m_Button_Cancel("Cancel"),
   m_Button_Add("Add"),
   m_Entry_Title(),

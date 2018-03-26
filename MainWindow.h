@@ -15,7 +15,9 @@ protected:
   //Signal handlers:
   void on_button_quit();
   void on_button_add_task();
-    void RefreshList();
+  void on_addtask_done();
+
+  void RefreshList();
 
   ModelColumns m_Columns;
 

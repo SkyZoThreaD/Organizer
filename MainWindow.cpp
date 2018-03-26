@@ -39,15 +39,13 @@ MainWindow::MainWindow()
   m_refTreeModel = Gtk::ListStore::create(m_Columns);
   m_TreeView.set_model(m_refTreeModel);
 
-  
-
   //Add the TreeView's view columns:
   m_TreeView.append_column("ID", m_Columns.m_col_id);
   m_TreeView.append_column("Title", m_Columns.m_col_title);
   m_TreeView.append_column("State", m_Columns.m_col_state);
   m_TreeView.append_column("Urgency", m_Columns.m_col_urgency);
 
-    RefreshList();
+  RefreshList();
 
   show_all_children();
 }
@@ -67,8 +65,15 @@ void MainWindow::on_button_quit()
   hide();
 }
 
+void MainWindow::on_addtask_done()
+{
+std::cout<<"OH YEAH"<<std::endl;
+}
+
 void MainWindow::on_button_add_task()
 {
     AddWindow *addwin = new AddWindow();
+    addwin->set_modal(true);
+    addwin->set_transient_for(*this);
     addwin->show();
 }
